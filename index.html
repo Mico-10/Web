@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>Vertical Photo Booth Carousel</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <style>
@@ -304,6 +305,96 @@
       height: 100%;
       display: block;
     }
+
+    /* -------- Responsive Tweaks for Small Screens -------- */
+    @media (max-width: 600px) {
+      body {
+        padding: 8px;
+      }
+
+      .photo-booth-wrapper {
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        aspect-ratio: auto;
+        border-radius: 24px;
+        padding: 14px;
+      }
+
+      .love-letter {
+        inset: 8% 4% 4%;
+        padding: 16px;
+        gap: 18px;
+      }
+
+      .love-letter-heading {
+        font-size: 26px;
+        margin-bottom: 32px;
+        white-space: normal;
+        text-align: center;
+      }
+
+      .love-envelope {
+        width: 200px;
+        height: 160px;
+      }
+
+      .love-letter-card {
+        font-size: 12px;
+        max-height: 140px;
+      }
+
+      .title-overlay h2 {
+        font-size: 20px;
+      }
+
+      .title-overlay span {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+      }
+    }
+
+    /* Landscape phones / very short viewports */
+    @media (max-height: 600px) and (orientation: landscape) {
+      body {
+        padding: 4px;
+      }
+
+      .photo-booth-wrapper {
+        width: min(100vw, 520px);
+        height: 100vh;
+        max-height: 100vh;
+        aspect-ratio: auto;
+        border-radius: 20px;
+        padding: 12px;
+      }
+
+      .love-letter {
+        inset: 6% 4% 4%;
+        padding: 12px;
+        gap: 14px;
+      }
+
+      .love-envelope {
+        width: 190px;
+        height: 145px;
+      }
+
+      .love-letter-card {
+        max-height: 110px;
+      }
+
+      .love-letter-heading {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .love-letter-toggle {
+        padding: 8px 20px;
+        font-size: 11px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -342,10 +433,6 @@
 
     <div class="hearts">♡ ♡</div>
 
-    <div class="title-overlay">
-      <h2>happy birtdi theangg!</h2>
-      <span>photo booth memories</span>
-    </div>
 
     <div class="love-letter">
       <div class="love-letter-heading">happy birtdi 
